@@ -3,7 +3,7 @@ vector<vector<int>> generate(int numRows) {
 
     res.push_back({1});
 
-    for(int i=1; i<=numRows-1; i++) {
+    for(int i=1; i<numRows; i++) {
         vector<int> row;
         row.push_back(1);
 
