@@ -1,5 +1,5 @@
-vector<int> getRow(int rowIndex) {
-    vector<int> prev={1},curr;
+vector<int> getPascalsTriangleRow(int rowIndex) {
+    vector<int> prev={1};
 
     for(int i=1;i<=rowIndex;i++) {
         vector<int> curr(i+1);
@@ -14,3 +14,6 @@ vector<int> getRow(int rowIndex) {
     }
     return prev;
 }
+
+// Time complexity:- O(N^2)
+// Space Complexity:- O(N)
