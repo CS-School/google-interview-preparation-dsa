@@ -1,4 +1,8 @@
-vector<vector<int>> generate(int numRows) {
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<vector<int> > generatePascalsTriangle(int numRows) {
     vector<vector<int> > res;
 
     res.push_back({1});
@@ -16,4 +20,15 @@ vector<vector<int>> generate(int numRows) {
     }
 
     return res;
+}
+
+int main() {
+    vector<vector<int> > res = generatePascalsTriangle(3);
+
+    for(int i=0; i<res.size(); i++) {
+        for(int j=0; j<res[i].size(); j++) {
+            cout<<res[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }
