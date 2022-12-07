@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 vector<int> getPascalsTriangleRow(int rowIndex) {
     vector<int> prev={1};
 
@@ -17,3 +21,33 @@ vector<int> getPascalsTriangleRow(int rowIndex) {
 
 // Time complexity:- O(N^2)
 // Space Complexity:- O(N)
+
+
+
+int main() {
+    vector<int> res = getPascalsTriangleRow(4);
+
+    for(int i=0; i<res.size(); i++) {
+        cout<<res[i]<<" ";
+    }
+    cout<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
