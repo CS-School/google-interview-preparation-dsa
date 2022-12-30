@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 vector<int> plusOne(vector<int>& digits) {
     reverse(digits.begin(), digits.end());
     int carry = 1;
@@ -19,4 +23,17 @@ vector<int> plusOne(vector<int>& digits) {
     }
     reverse(digits.begin(), digits.end());
     return digits;
+}
+
+// Time Complexity:- O(N)
+// Space Complexity:- O(1)
+
+int main() {
+    vector<int> digits = {1, 2, 3};
+    digits = plusOne(digits);
+
+    for(int i=0; i<digits.size(); i++) {
+        cout<<digits[i]<<" ";
+    }
+    cout<<endl;
 }
