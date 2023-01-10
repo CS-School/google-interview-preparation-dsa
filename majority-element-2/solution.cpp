@@ -53,6 +53,9 @@ vector<int> majorityElement(vector<int> &nums)
     return ret;
 }
 
+// Time Complexity:- O(N)
+// Space Complexity:- O(1)
+
 int main()
 {
     vector<int> v = {2, 2, 3, 1, 1, 2, 1};
