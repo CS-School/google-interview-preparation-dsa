@@ -16,11 +16,11 @@ int maximumGap(const vector<int> &A)
     sort(v.begin(), v.end());
 
     int ans = 0;
-    int rmin = v[0].second;
+    int lmin = v[0].second;
     for (int i = 0; i < n; i++)
     {
-        ans = max(ans, v[i].second - rmin);
-        rmin = min(rmin, v[i].second);
+        ans = max(ans, v[i].second - lmin);
+        lmin = min(lmin, v[i].second);
     }
     return ans;
 }
