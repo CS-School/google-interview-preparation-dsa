@@ -25,6 +25,9 @@ int maximumGap(const vector<int> &A)
     return ans;
 }
 
+// Time Complexity:- O(nlogn)
+// Space Complexity:- O(N)
+
 int main()
 {
     vector<int> a = {3, 5, 4, 2};
