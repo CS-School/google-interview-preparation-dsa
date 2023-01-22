@@ -4,14 +4,12 @@
 using namespace std;
 
 vector<int> wave(vector<int> &A) {
-    for (int i = 0; i < A.size(); i+=2)
+    for (int i = 1; i < A.size(); i+=2)
     {
-        // If current even element is smaller than previous
-        if (i>0 && A[i-1] > A[i] )
+        if (A[i-1] < A[i] )
             swap(A[i], A[i-1]);
  
-        // If current even element is smaller than next
-        if (i<A.size()-1 && A[i] < A[i+1] )
+        if (i<A.size()-1 && A[i] > A[i+1] )
             swap(A[i], A[i + 1]);
     }
 
