@@ -7,21 +7,27 @@ using namespace std;
 int cntBits(vector<int> &A)
 {
 
-    long long int s = 0, c = 0, i, j;
-    long long int n = A.size();
-    for (i = 0; i < 31; i++)
+    long long int res = 0;
+    long long int countOn = 0;
+
+    for (int i = 0; i < 32; i++)
     {
-        c = 0;
-        for (j = 0; j < A.size(); j++)
+        countOn = 0;
+        for (int j = 0; j < A.size(); j++)
         {
             if (A[j] & (1 << i))
-                c++;
+                countOn++;
         }
-        s += (c * (n - c) * 2);
+
+        int countOff = A.size() - countOn;
+        int diff = countOn * countOff * 2;
+        res += diff;
     }
-    s = s % mod;
-    s = (int)s;
-    return s % mod;
+
+    res = res % mod;
+    res = (int)res;
+
+    return res % mod;
 }
 
 int main()
