@@ -4,36 +4,36 @@ using namespace std;
 
 int search(vector<int> &nums, int target)
 {
-    int leftIdx = 0;
-    int rightIdx = nums.size() - 1;
+    int low = 0;
+    int high = nums.size() - 1;
 
-    while (leftIdx <= rightIdx)
+    while (low <= high)
     {
-        int midIdx = (leftIdx + rightIdx) / 2;
-        if (nums[midIdx] == target)
+        int mid = (low + high) / 2;
+        if (nums[mid] == target)
         {
-            return midIdx;
+            return mid;
         }
-        if (nums[leftIdx] <= nums[midIdx])
+        if (nums[low] <= nums[mid])
         { // left is sorted
-            if (target >= nums[leftIdx] && target < nums[midIdx])
+            if (target >= nums[low] && target < nums[mid])
             {
-                rightIdx = midIdx - 1;
+                high = mid - 1;
             }
             else
             {
-                leftIdx = midIdx + 1;
+                low = mid + 1;
             }
         }
         else
         { // right is sorted
-            if (target > nums[midIdx] && target <= nums[rightIdx])
+            if (target > nums[mid] && target <= nums[high])
             {
-                leftIdx = midIdx + 1;
+                low = mid + 1;
             }
             else
             {
-                rightIdx = midIdx - 1;
+                high = mid - 1;
             }
         }
     }
